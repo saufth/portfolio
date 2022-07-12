@@ -1,17 +1,18 @@
 # Personal portfolio
 
-A portfolio built in [Next.js](https://nextjs.org) with [TailwindCSS](https://tailwindcss.com) in the front-end styling.
+A portfolio built in [Next.js](https://nextjs.org) using [TailwindCSS](https://tailwindcss.com) in the front-end styling.
 
 ## Technologies
 
 - [Node.js]() v16.16.0
 - [Next.js](https://nextjs.org) v12.2.2
 - [React.js](https://reactjs.org) v18.2.0
+- [TailwindCSS](https://tailwindcss.com) v3.1.5
 
 ### Dev Technologies
 
-- [TailwindCSS](https://tailwindcss.com) v3.1.5
 - [ESLint](https://eslint.org) (StandardJS) v8.0.1
+- [Husky](https://typicode.github.io/husky) v8.0.1
 
 ## Folder Structure
 
