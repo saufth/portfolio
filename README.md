@@ -20,7 +20,7 @@ I'm using the <ins>src</ins> folder for keep code at a different level than conf
 
 Thi is the structure I use for my Next.js projects:
 
-<img src="/assets/folder-structure/onion-shape.jpg" alt="Onion-shape structure" />
+<img src="/public/folder-structure/onion-shape.jpg" alt="Onion-shape structure" />
 
 We can express the above image with the following structure:
 
@@ -182,11 +182,11 @@ Typically, an inner layer cannot import from an outer layer, that means that **<
 
 **Wrong**
 
-<img src="/assets/folder-structure/onion-shape-flow-wrong.jpg" alt="Onion-shape structure" />
+<img src="/public/folder-structure/onion-shape-flow-wrong.jpg" alt="Onion-shape structure" />
 
 **Ok**
 
-<img src="/assets/folder-structure/onion-shape-flow-ok.jpg" alt="Onion-shape structure" />
+<img src="/public/folder-structure/onion-shape-flow-ok.jpg" alt="Onion-shape structure" />
 
 This rule can ensure your <ins>core</ins> is decoupled from the <ins>domain</ins> to avoid cyclical dependencies and keep your architecture untangled.
 
