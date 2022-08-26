@@ -1,0 +1,139 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply
+      /* Theme */
+      bg-gradient-to-r
+      from-cadmium-yellow
+      via-cadmium-yellow
+      to-sunglow
+      /* Typography */
+      font-proxnova-regular;
+  }
+
+  *, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p,
+  h1 *, h2 *, h3 *, h4 *, h5 *, h6 *, p * {
+    @apply
+      text-transparent
+      bg-clip-text
+      bg-gray-900;
+  }
+
+  /* Proxima Nova fonts */
+
+  @font-face {
+    font-family: Helvetica Nueu LT Pro Black;
+    src: url(../../public/fonts/helvetica/nueu/lt-pro-black.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Light;
+    src: url(../../public/fonts/proxima-nova/light.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Light Italic;
+    src: url(../../public/fonts/proxima-nova/light-italic.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Regular;
+    src: url(../../public/fonts/proxima-nova/regular.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Regular Italic;
+    src: url(../../public/fonts/proxima-nova/regular-italic.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Semibold;
+    src: url(../../public/fonts/proxima-nova/semibold.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Semibold Italic;
+    src: url(../../public/fonts/proxima-nova/semibold-italic.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Bold;
+    src: url(../../public/fonts/proxima-nova/bold.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Bold Italic;
+    src: url(../../public/fonts/proxima-nova/bold-italic.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Extrabold;
+    src: url(../../public/fonts/proxima-nova/extrabold.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Extrabold Italic;
+    src: url(../../public/fonts/proxima-nova/extrabold-italic.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Black;
+    src: url(../../public/fonts/proxima-nova/black.otf);
+  }
+
+  @font-face {
+    font-family: Proxima Nova Black Italic;
+    src: url(../../public/fonts/proxima-nova/black-italic.otf);
+  }
+
+  /* Futura fonts */
+
+  @font-face {
+    font-family: Futura Book;
+    src: url(../../public/fonts/futura/FuturaPTBook.otf);
+  }
+
+  @font-face {
+    font-family: Futura Light;
+    src: url(../../public/fonts/futura/FuturaPTLight.otf);
+  }
+
+  @font-face {
+    font-family: Futura Medium;
+    src: url(../../public/fonts/futura/FuturaPTMedium.otf);
+  }
+
+  @font-face {
+    font-family: Futura Bold;
+    src: url(../../public/fonts/futura/FuturaPTBold.otf);
+  }
+
+  @font-face {
+    font-family: Futura ExtraBold;
+    src: url(../../public/fonts/futura/FuturaPTExtraBold.otf);
+  }
+
+  @font-face {
+    font-family: Futura Heavy;
+    src: url(../../public/fonts/futura/FuturaPTHeavy.otf);
+  }
+}

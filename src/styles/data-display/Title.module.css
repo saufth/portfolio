@@ -1,0 +1,19 @@
+.title {
+  @apply
+    /* Typography */
+    font-helvnueu-black
+    text-6xl md:text-8xl
+    /* Background */
+    bg-gradient-to-r
+    from-gray-800
+    via-gray-800
+    to-black;
+}
+
+.highlight {
+  @apply
+    bg-gradient-to-r
+    from-sky-magenta
+    via-sky-magenta
+    to-blue-violet;
+}

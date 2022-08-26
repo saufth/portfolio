@@ -1,0 +1,14 @@
+.hero {
+  @apply
+    /* Sizing */
+    h-xs md:h-sm
+    /* Layout */
+    overflow-hidden
+    /* Flexbox & Grid */
+    flex flex-col
+    justify-center
+    items-center
+    /* Typography */
+    text-lg md:text-2xl
+    font-proxnova-semi;
+}

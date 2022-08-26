@@ -1,0 +1,21 @@
+.avatar {
+  @apply
+    /* Sizing */
+    w-14 md:w-16
+    h-14 md:h-16
+    /* Background */
+    bg-gradient-to-br
+    from-blue-300
+    to-button-blue
+    /* Layout */
+    overflow-hidden
+    /* Border */
+    rounded-l-[3rem]
+    rounded-tr-[3rem]
+    rounded-br-[1.1rem]
+    /* Transforms */
+    -rotate-45
+    /* Shadow */
+    shadow-lg-c
+    shadow-sky-magenta;
+}

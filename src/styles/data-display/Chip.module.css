@@ -1,0 +1,19 @@
+.chip {
+  @apply
+    /* Background */
+    bg-gradient-to-r
+    from-sky-magenta
+    via-sky-magenta
+    to-blue-violet
+    /* Typography */
+    text-white
+    md:text-lg
+    font-proxnova-semi
+    /* Spacing */
+    py-1
+    px-3.5 md:px-4
+    /* Border */
+    rounded-full
+    shadow-lg-c
+    shadow-sky-magenta;
+}
