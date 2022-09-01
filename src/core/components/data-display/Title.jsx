@@ -1,5 +1,5 @@
 // Styles
-import styles from '../../../../styles/data-display/Title.module.css'
+import styles from '../../../styles/data-display/Title.module.css'
 
 const Title = (
   {

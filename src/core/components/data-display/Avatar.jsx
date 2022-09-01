@@ -1,4 +1,4 @@
-import styles from '../../../../styles/data-display/Avatar.module.css'
+import styles from '../../../styles/data-display/Avatar.module.css'
 
 const Avatar = () => {
   return (

@@ -3,7 +3,7 @@ const Container = ({ children, bgColor = 'transparent' }) => {
 
   return (
     <div className={bgColorStyle}>
-      <div className="max-w-6xl px-8 py-3 my-0 mx-auto">
+      <div className="max-w-6xl px-8 my-0 mx-auto">
         {children}
       </div>
     </div>

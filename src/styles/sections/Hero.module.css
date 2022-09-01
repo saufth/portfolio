@@ -1,14 +1,17 @@
 .hero {
   @apply
     /* Sizing */
-    h-xs md:h-sm
+    h-xl sm:h-3xl
     /* Layout */
     overflow-hidden
     /* Flexbox & Grid */
     flex flex-col
     justify-center
     items-center
-    /* Typography */
-    text-lg md:text-2xl
-    font-proxnova-semi;
+    /* Background */
+    bg-gradient-to-r
+    from-cadmium-yellow
+    via-cadmium-yellow
+    to-sunglow;
+  clip-path: polygon(24% 0%, 100% 0, 100% 94%, 0 100%, 0 100%, 0 0);
 }

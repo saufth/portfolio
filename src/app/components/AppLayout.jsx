@@ -2,7 +2,6 @@
 import Footer from '../../components/sections/Footer'
 import Head from 'next/head'
 import Navbar from '../../components/navigation/Navbar'
-import Container from '../../core/ui/components/layout/Container'
 
 const keywordList = [
   'web developer',
@@ -24,13 +23,11 @@ const AppLayout = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container>
-        <Navbar />
+      <Navbar />
 
-        <main>
-          {children}
-        </main>
-      </Container>
+      <main>
+        {children}
+      </main>
 
       <Footer />
     </div>

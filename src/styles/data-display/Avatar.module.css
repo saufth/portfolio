@@ -1,14 +1,14 @@
 .avatar {
   @apply
     /* Sizing */
-    w-14 md:w-16
-    h-14 md:h-16
+    w-[3.25rem] sm:w-16
+    h-[3.25rem] sm:h-16
+    /* Layout */
+    overflow-hidden
     /* Background */
     bg-gradient-to-br
     from-blue-300
     to-button-blue
-    /* Layout */
-    overflow-hidden
     /* Border */
     rounded-l-[3rem]
     rounded-tr-[3rem]
@@ -16,6 +16,6 @@
     /* Transforms */
     -rotate-45
     /* Shadow */
-    shadow-lg-c
+    shadow-center-sm
     shadow-sky-magenta;
 }

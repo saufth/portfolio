@@ -51,12 +51,10 @@ module.exports = {
       colors: {
         'blue-violet': '#932fe9',
         'sky-magenta': '#c96bb6',
-        'fluorescent-blue': '#23E8DA',
-        'button-blue': '#25A1F5',
-        'deep-carmine-pink': '#F53425',
-        'cadmium-yellow': '#FFF601  ',
-        bluebonnet: '#262FFF',
-        sunglow: '#FFC837'
+        'button-blue': '#28A3F7',
+        'deep-carmine-pink': '#F63627',
+        'cadmium-yellow': '#FFF603',
+        sunglow: '#FFCA39'
       },
       width: {
         ...sizeBreakpoints,
@@ -66,11 +64,11 @@ module.exports = {
         ...sizeBreakpoints,
         ...sizeDefaults
       },
-      inset: {
-        1.75: '0.4375rem'
+      padding: {
+        0.75: '0.1875rem' /* 3px */
       },
       boxShadow: {
-        'lg-c': '0px 0px 20px -2px rgba(0, 0, 0, 0.3)'
+        'center-sm': '0px 0px 16px -3px rgba(0, 0, 0, 0.3)'
       }
     }
   },

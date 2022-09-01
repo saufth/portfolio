@@ -1,52 +1,43 @@
+.group {}
+
 .buttonBurger {
   @apply
     /* Sizing */
-    w-12 md:w-14
-    h-12 md:h-14
+    w-5 sm:w-6
+    h-4 sm:h-5
     /* Layout */
-    relative
-    /* Background */
-    bg-gradient-to-bl
-    from-blue-300
-    to-button-blue
-    /* Border */
-    rounded-r-[3rem]
-    rounded-tl-[3rem]
-    rounded-bl-[1.1rem]
-    /* Shadow */
-    shadow-lg-c
-    shadow-cadmium-yellow
-    /* Transforms */
-    rotate-45 hover:rotate-0
-    /* Transitions & Animation */
-    transition-transform
-    duration-500;
+    relative;
 }
 
 .buttonBurgerSticks {
   @apply
     /* Sizing */
-    w-5 md:w-6
-    h-0.5 md:h-[0.188rem]
-    after:w-5 after:md:w-6
-    after:h-0.5 md:after:h-[0.188rem]
+    before:w-5 before:sm:w-7
+    before:h-0.5
+    w-4 sm:w-6 group-hover:sm:w-7
+    h-0.5
+    after:w-5 after:sm:w-7
+    after:h-0.5
     /* Background */
-    bg-blue-violet
-    after:bg-blue-violet
+    before:bg-gray-700
+    bg-gray-700
+    after:bg-gray-700
     /* Layout */
+    before:absolute
+    before:-top-2 sm:before:-top-2.5
+    before:right-0
+    before:bottom-0
     absolute
-    -top-2 md:-top-3
+    top-0
     right-0
     bottom-0
-    left-0
     after:absolute
-    after:top-2 md:after:top-3
+    after:top-2 sm:after:top-2.5
     after:right-0
     after:bottom-0
-    after:left-0
     /* Spacing */
     m-auto
-    /* Border */
-    rounded-full
-    after:rounded-full
+    /* Transitions & Animation */
+    transition-[width]
+    duration-300;
 }

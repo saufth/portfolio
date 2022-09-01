@@ -1,4 +1,4 @@
-import styles from '../../../../styles/data-display/Chip.module.css'
+import styles from '../../../styles/data-display/Chip.module.css'
 
 const Chip = ({ label }) => {
   return (

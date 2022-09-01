@@ -1,6 +1,6 @@
 // Components
-import Anchor from '../../core/ui/components/navigation/Anchor'
-import Logo from '../../core/ui/components/data-display/Logo'
+import Anchor from '../../core/components/navigation/Anchor'
+import Logo from '../../core/components/data-display/Logo'
 
 const Footer = () => {
   return (
