@@ -4,10 +4,13 @@
 @tailwind utilities;
 
 @layer base {
-  body {
+  html {
     @apply
       /* Typography */
-      font-proxnova-regular;
+      bg-zinc-900
+      font-proxnova-regular
+      /* Interactivity */
+      scroll-smooth;
   }
 
   *, *::before, *::after {

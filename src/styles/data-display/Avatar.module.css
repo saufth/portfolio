@@ -1,8 +1,8 @@
 .avatar {
   @apply
     /* Sizing */
-    w-[3.25rem] sm:w-16
-    h-[3.25rem] sm:h-16
+    w-14 sm:w-15 lg:w-16
+    h-14 sm:h-15 lg:h-16
     /* Layout */
     overflow-hidden
     /* Background */
@@ -12,7 +12,7 @@
     /* Border */
     rounded-l-[3rem]
     rounded-tr-[3rem]
-    rounded-br-[1.1rem]
+    rounded-br-2xl
     /* Transforms */
     -rotate-45
     /* Shadow */

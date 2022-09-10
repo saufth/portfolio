@@ -1,8 +1,9 @@
 .hero {
   @apply
     /* Sizing */
-    h-xl sm:h-3xl
+    h-xl sm:h-2xl lg:h-3xl
     /* Layout */
+    relative
     overflow-hidden
     /* Flexbox & Grid */
     flex flex-col
@@ -14,4 +15,15 @@
     via-cadmium-yellow
     to-sunglow;
   clip-path: polygon(24% 0%, 100% 0, 100% 94%, 0 100%, 0 100%, 0 0);
+}
+
+.icons {
+  @apply
+    /* Sizing */
+    [&>svg]:w-16
+    [&>svg]:h-auto
+    /* Layout */
+    [&>svg]:absolute
+    /* Effects */
+    [&>svg]:opacity-0;
 }

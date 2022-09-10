@@ -7,17 +7,17 @@ import Container from '../../core/components/layout/Container'
 
 const Navbar = () => {
   return (
-    <header className="w-full py-6 sm:py-8 absolute z-50">
+    <header className="w-full py-6 sm:py-8 absolute top-0 z-50">
       <Container>
         <nav className="flex items-center justify-between">
-          <Anchor>
-            <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center">
+            <Anchor>
               <Avatar />
-              <div className="ml-5 sm:ml-7">
-                <Chip label="Hi, I&apos;m Saúl" />
-              </div>
+            </Anchor>
+            <div className="ml-5 sm:ml-6 lg:ml-7">
+              <Chip label="Hi, I&apos;m Saúl" />
             </div>
-          </Anchor>
+          </div>
 
           <BurgerButton />
         </nav>

@@ -12,8 +12,8 @@ const IconLink = ({ text, icon, href = '/', target }) => {
   return (
     <Anchor target={target} href={href}>
       <span className="flex">
-        <img src={iconPath} className="w-3.5 sm:w-5" />
-          <span className="ml-3 sm:ml-4">
+        <img src={iconPath} className="w-3.5 sm:w-4 lg:w-5" />
+          <span className="ml-2.5 sm:ml-3 lg:ml-4">
             <p className={styles.text}>
               {text}
             </p>

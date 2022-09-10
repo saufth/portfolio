@@ -1,7 +1,7 @@
 .text {
   @apply
     /* Typography */
-    text-lg sm:text-2xl
+    sm:text-xl lg:text-2xl
     text-transparent
     /* Background */
     bg-clip-text

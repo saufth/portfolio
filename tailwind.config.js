@@ -13,6 +13,7 @@ const sizeBreakpoints = {
 }
 
 const sizeDefaults = {
+  15: "3.75rem", /* 60px */
   18: '4.5rem', /* 72px */
   18.75: '4.688rem', /* 75px */
   '600px': '600px'
@@ -69,6 +70,18 @@ module.exports = {
       },
       boxShadow: {
         'center-sm': '0px 0px 16px -3px rgba(0, 0, 0, 0.3)'
+      },
+      animation: {
+        'steam-up': 'steam-up 5s infinite ease-in-out'
+      },
+      keyframes: {
+        'steam-up': {
+          '64%': { opacity: 0.4 },
+          '100%': {
+            transform: 'translateY(-8rem)',
+            opacity: 0
+          },
+        }
       }
     }
   },

@@ -1,9 +1,9 @@
 .chip {
   @apply
     /* Typography */
-    text-white
-    text-sm sm:text-lg
     font-proxnova-semi
+    text-sm sm:text-base lg:text-lg
+    text-white
     /* Background */
     bg-gradient-to-r
     from-sky-magenta
@@ -11,7 +11,7 @@
     to-blue-violet
     /* Spacing */
     py-0.75
-    px-3.5 sm:px-4
+    px-3.5 lg:px-4
     /* Border */
     rounded-full
     shadow-center-sm
