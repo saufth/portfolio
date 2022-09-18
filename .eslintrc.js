@@ -22,7 +22,9 @@ module.exports = {
     'space-before-function-paren': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'jsx-quotes': ['error', 'prefer-double']
+    'jsx-quotes': ['error', 'prefer-double'],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   settings: {
     react: {

@@ -2,10 +2,19 @@
 import IconLink from '../../core/components/navigation/IconLink'
 import Navbar from '../navigation/Navbar'
 import Title from '../../core/components/data-display/Title'
+// Hooks
+import useBgAnimation from '../../modules/animation/hooks/useBgAnimation'
+// Data
+import iconsData from '../../modules/sections/data/hero-animation-icons.json'
 // Styles
 import styles from '../../styles/sections/Hero.module.css'
 
+const iconsViewBox = '0 0 24 24'
+const animationStyle = 'animate-steam-up'
+const animationDelay = 777
+
 const Hero = () => {
+  const [iconsAnimating, iconsRef] = useBgAnimation(iconsData, animationDelay)
 
   return (
     <div className={styles.hero}>
@@ -15,7 +24,7 @@ const Hero = () => {
       <div className="flex flex-col items-center">
         <Title
           text="full~stack"
-          highlighted="web dev"
+          highlighted="web.dev"
           info="Software developer"
           center
         />
@@ -30,36 +39,19 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 -z-10">
-        <div id="icons" className={styles.icons}>
-
-          <svg viewBox="0 0 2500 2500" className="animate-steam-up top-[32%] right-[20%]">
-            <path
-              d="M0,0v2500h2500V0H0z M1317.7,2141.2c-36.8,74.9-107.2,124-188.7,147.8c-125.2,28.8-245,12.4-334.1-41.1
-                c-59.6-36.6-106.2-92.9-137.8-157.8c63.5-38.7,126.7-77.7,190.1-116.4c1.7,0.7,6.7,9.7,13.3,21.4c24.2,40.6,45.2,69.4,86.3,89.6
-                c40.4,13.8,129,22.6,163.3-48.5c20.9-36.1,14.3-154,14.3-282.6c0-202,0.9-402.6,0.9-604.6h233.8l0,0c0,215.1,1.2,429.4,0,643.8
-                C1359.6,1924.2,1371,2043,1317.7,2141.2z M2287.8,2075.1c-81.3,278-534.5,287.1-715.5,103.4c-38.3-43.3-62.3-65.8-85.1-115.7
-                c96.2-55.4,96.2-55.4,189.9-109.6c50.9,78.2,97.9,121.2,182.5,138.8c114.8,14,230.3-25.4,204.4-147.3
-                c-26.6-99.6-235-123.8-376.9-230.3c-144-96.7-177.8-331.7-59.4-466c39.4-49.7,106.7-86.7,177.3-104.6c24.5-3.1,49.2-6.4,73.7-9.5
-                c141.4-2.9,229.8,34.5,294.7,106.9c18.1,18.3,32.8,38,60.4,80.8c-75.3,48-75.1,47.5-183,117.4c-23.1-49.7-61.3-80.8-101.7-94.3
-                c-62.7-19-141.9,1.7-158.3,68c-5.7,20.4-4.5,39.4,4.5,73.2c25.4,58,110.7,83.2,187.3,118.3c220.3,89.4,294.7,185.1,313,299.2
-                C2313,2001.9,2291.1,2065.6,2287.8,2075.1z"
-                fill="zinc-900"
-              />
-          </svg>
-
-          <svg viewBox="0 0 256 153.6" className="animate-steam-up top-[32%] left-[20%]">
-            <path
-              d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697
-                9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733
-                23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0zM64 76.8C29.867 76.8
-                8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751
-                138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8
-                19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8z"
-              fill="zinc-900"
-            />
-          </svg>
-
+      <div className={styles.canvas}>
+        <div className={styles.icons}>
+          {iconsData.map((icon, index) => (
+              <svg
+                viewBox={iconsViewBox}
+                className={iconsAnimating[index].isAnimating ? animationStyle : ''}
+                ref={element => iconsRef.current[index] = element}
+                key={index}
+              >
+                <path d={icon.data} />
+              </svg>
+            )
+          )}
         </div>
       </div>
 

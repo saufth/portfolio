@@ -88,11 +88,6 @@ We could develop our folder structure in this way:
       - data-display
         - List.tsx
       - ...
-    - modules
-      - data-display
-        - hooks
-          - useIcon.ts
-      - ...
 ```
 
 #### Domain

@@ -17,8 +17,18 @@
   clip-path: polygon(24% 0%, 100% 0, 100% 94%, 0 100%, 0 100%, 0 0);
 }
 
+.canvas {
+  @apply
+    /* Layout */
+    absolute
+    inset-0
+    -z-10;
+}
+
 .icons {
   @apply
+    /* SVG */
+    [&>svg]:fill-zinc-900
     /* Sizing */
     [&>svg]:w-16
     [&>svg]:h-auto

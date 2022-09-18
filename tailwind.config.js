@@ -72,7 +72,7 @@ module.exports = {
         'center-sm': '0px 0px 16px -3px rgba(0, 0, 0, 0.3)'
       },
       animation: {
-        'steam-up': 'steam-up 5s infinite ease-in-out'
+        'steam-up': 'steam-up 5s ease-in-out'
       },
       keyframes: {
         'steam-up': {
