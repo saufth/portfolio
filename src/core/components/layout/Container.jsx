@@ -1,9 +1,12 @@
+// Styles
+import styles from '../../../styles/layout/Container.module.css'
+
 const Container = ({ children, bgColor = 'transparent' }) => {
   const bgColorStyle = `bg-${bgColor}`
 
   return (
     <div className={bgColorStyle}>
-      <div className="max-w-6xl px-8 my-0 mx-auto">
+      <div className={styles.container}>
         {children}
       </div>
     </div>

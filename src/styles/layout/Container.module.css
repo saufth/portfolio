@@ -1,0 +1,9 @@
+.container {
+  @apply
+    /* Sizing */
+    max-w-6xl
+    /* Spacing */
+    px-8
+    my-0
+    mx-auto;
+}

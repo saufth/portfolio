@@ -1,0 +1,15 @@
+.footer {
+  @apply
+    /* Spacing */
+    py-4
+    /* Typography */
+    text-white;
+}
+
+.message {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    justify-center
+    items-center;
+}

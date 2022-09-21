@@ -1,5 +1,11 @@
 .text {
   @apply
+    /* Sizing */
+    ml-2.5 sm:ml-3 lg:ml-4;
+}
+
+.text p {
+  @apply
     /* Typography */
     sm:text-xl lg:text-2xl
     text-transparent
@@ -9,4 +15,10 @@
     from-gray-700
     via-gray-700
     to-gray-900;
+}
+
+.icon {
+  @apply
+    /* Sizing */
+    w-3.5 sm:w-4 lg:w-5;
 }

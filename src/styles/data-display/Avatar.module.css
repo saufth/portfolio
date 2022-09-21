@@ -19,3 +19,9 @@
     shadow-center-sm
     shadow-sky-magenta;
 }
+
+.image {
+  @apply
+   /* Transform */
+    rotate-45;
+}

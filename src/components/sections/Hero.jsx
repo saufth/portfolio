@@ -21,7 +21,7 @@ const Hero = () => {
 
       <Navbar />
 
-      <div className="flex flex-col items-center">
+      <div className={styles.content}>
         <Title
           text="full~stack"
           highlighted="web.dev"
@@ -29,7 +29,7 @@ const Hero = () => {
           center
         />
 
-        <div className="mt-5 sm:mt-8 lg:mt-10">
+        <div className={styles.location}>
           <IconLink
             text="Querétaro, Mx."
             icon="location"

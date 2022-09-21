@@ -1,0 +1,33 @@
+.navbar {
+  @apply
+    /* Sizing */
+    w-full
+    /* Layout */
+    absolute
+    top-0
+    z-50
+    /* Spacing */
+    py-6 sm:py-8;
+}
+
+.navigation {
+  @apply
+    /* Layout */
+    flex
+    items-center
+    justify-between;
+}
+
+.avatar {
+  @apply
+    /* Layout */
+    flex
+    justify-center
+    items-center;
+}
+
+.chip {
+  @apply
+    /* Spacing */
+    ml-5 sm:ml-6 lg:ml-7;
+}

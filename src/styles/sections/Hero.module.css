@@ -17,6 +17,20 @@
   clip-path: polygon(24% 0%, 100% 0, 100% 94%, 0 100%, 0 100%, 0 0);
 }
 
+.content {
+  @apply
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    items-center;
+}
+
+.location {
+  @apply
+    /* Spacing */
+    mt-5 sm:mt-8 lg:mt-10;
+}
+
 .canvas {
   @apply
     /* Layout */
