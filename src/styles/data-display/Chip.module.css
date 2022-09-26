@@ -1,19 +1,24 @@
 .chip {
   @apply
+    /* Layout */
+    overflow-hidden
     /* Typography */
     font-proxnova-semi
     text-sm sm:text-base lg:text-lg
-    text-white
+    text-zinc-900
     /* Background */
-    bg-gradient-to-r
-    from-sky-magenta
-    via-sky-magenta
-    to-blue-violet
+    bg-white/10
+    /* Filters */
+    backdrop-saturate-[3]
+    backdrop-blur-sm
     /* Spacing */
-    py-0.75
+    py-0.5
     px-3.5 lg:px-4
-    /* Border */
-    rounded-full
+    /* Shadow */
     shadow-center-sm
-    shadow-sky-magenta;
+    shadow-sky-magenta
+    /* Border */
+    border
+    border-zinc-600
+    rounded-full;
 }

@@ -25,9 +25,3 @@
     justify-center
     items-center;
 }
-
-.chip {
-  @apply
-    /* Spacing */
-    ml-5 sm:ml-6 lg:ml-7;
-}

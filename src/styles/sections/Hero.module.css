@@ -1,28 +1,32 @@
 .hero {
   @apply
     /* Sizing */
+    w-full
     h-xl sm:h-2xl lg:h-3xl
     /* Layout */
-    relative
     overflow-hidden
-    /* Flexbox & Grid */
-    flex flex-col
-    justify-center
-    items-center
     /* Background */
     bg-gradient-to-r
-    from-cadmium-yellow
-    via-cadmium-yellow
-    to-sunglow;
+    from-picton-blue
+    via-picton-blue
+    to-button-blue;
   clip-path: polygon(24% 0%, 100% 0, 100% 94%, 0 100%, 0 100%, 0 0);
 }
 
-.content {
+.greeting {
   @apply
-    /* Flexbox & Grid */
-    flex
-    flex-col
-    items-center;
+    /* Typography */
+    [&>span]:font-proxnova-semi
+    [&>span]:sm:text-xl [&>span]:lg:text-2xl
+    [&>span]:text-transparent
+    /* Background */
+    [&>span]:bg-clip-text
+    [&>span]:bg-gradient-to-r
+    [&>span]:from-zinc-800
+    [&>span]:via-zinc-800
+    [&>span]:to-black
+    /* Spacing */
+    mb-3;
 }
 
 .location {

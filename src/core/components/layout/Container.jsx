@@ -1,14 +1,27 @@
-// Styles
 import styles from '../../../styles/layout/Container.module.css'
 
-const Container = ({ children, bgColor = 'transparent' }) => {
-  const bgColorStyle = `bg-${bgColor}`
+const alignmentStyles = {
+  start: styles.flexCenterStart,
+  center: styles.flexCenter,
+  end: styles.flexCenterEnd
+}
+
+const Container = (
+  {
+    children,
+    auto,
+    fullHeight,
+    centerAlignment
+  }
+) => {
+  const autoStyle = auto ? styles.container : ''
+  const sizeStyle = fullHeight ? 'h-full' : ''
+  const flexStyle = centerAlignment ? alignmentStyles[centerAlignment] : ''
+  const containerStyle = `${autoStyle} ${sizeStyle} ${flexStyle}`
 
   return (
-    <div className={bgColorStyle}>
-      <div className={styles.container}>
-        {children}
-      </div>
+    <div className={containerStyle}>
+      {children}
     </div>
   )
 }

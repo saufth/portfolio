@@ -1,4 +1,5 @@
 // Components
+import Container from '../../core/components/layout/Container'
 import IconLink from '../../core/components/navigation/IconLink'
 import Navbar from '../navigation/Navbar'
 import Title from '../../core/components/data-display/Title'
@@ -14,19 +15,26 @@ const animationStyle = 'animate-steam-up'
 const animationDelay = 777
 
 const Hero = () => {
-  const [iconsAnimating, iconsRef] = useBgAnimation(iconsData, animationDelay)
+  const [itemsAnimating, animatedItemsRef] = useBgAnimation(
+    animationStyle,
+    iconsData.length,
+    animationDelay
+  )
 
   return (
     <div className={styles.hero}>
 
       <Navbar />
 
-      <div className={styles.content}>
+      <Container auto fullHeight centerAlignment="start">
+        <div className={styles.greeting}>
+          <span>Hi</span> 👋 <span>I&apos;m Saúl,</span>
+        </div>
+
         <Title
           text="full~stack"
           highlighted="web.dev"
           info="Software developer"
-          center
         />
 
         <div className={styles.location}>
@@ -37,23 +45,22 @@ const Hero = () => {
             target="_blank"
           />
         </div>
-      </div>
 
-      <div className={styles.canvas}>
-        <div className={styles.icons}>
-          {iconsData.map((icon, index) => (
+        <div className={styles.canvas}>
+          <div className={styles.icons}>
+            {iconsData.map((icon, index) => (
               <svg
                 viewBox={iconsViewBox}
-                className={iconsAnimating[index].isAnimating ? animationStyle : ''}
-                ref={element => iconsRef.current[index] = element}
+                className={itemsAnimating[index].isAnimating}
+                ref={element => animatedItemsRef.current[index] = element}
                 key={index}
               >
                 <path d={icon.data} />
               </svg>
-            )
-          )}
+            ))}
+          </div>
         </div>
-      </div>
+      </Container>
 
     </div>
   )

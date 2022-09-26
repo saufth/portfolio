@@ -1,9 +1,32 @@
 .container {
   @apply
     /* Sizing */
-    max-w-6xl
+    max-w-5xl
     /* Spacing */
-    px-8
     my-0
-    mx-auto;
+    mx-auto
+    px-6 lg:px-4;
+}
+
+.flexCenterStart {
+  @apply
+    /* Flexbox & Grid */
+    flex flex-col
+    justify-center;
+}
+
+.flexCenter {
+  @apply
+    /* Flexbox & Grid */
+    flex flex-col
+    justify-center
+    items-center;
+}
+
+.flexCenterEnd {
+  @apply
+    /* Flexbox & Grid */
+    flex flex-col
+    justify-center
+    items-end;
 }

@@ -1,27 +1,21 @@
 .avatar {
   @apply
     /* Sizing */
-    w-14 sm:w-15 lg:w-16
-    h-14 sm:h-15 lg:h-16
+    w-16 sm:w-18 lg:w-20
+    h-16 sm:h-18 lg:h-20
     /* Layout */
     overflow-hidden
     /* Background */
-    bg-gradient-to-br
-    from-blue-300
-    to-button-blue
+    bg-white/10
+    /* Filters */
+    backdrop-saturate-[3]
+    backdrop-blur-sm
     /* Border */
-    rounded-l-[3rem]
-    rounded-tr-[3rem]
-    rounded-br-2xl
-    /* Transforms */
-    -rotate-45
+    border
+    border-zinc-600
+    rounded-full
     /* Shadow */
     shadow-center-sm
     shadow-sky-magenta;
 }
 
-.image {
-  @apply
-   /* Transform */
-    rotate-45;
-}

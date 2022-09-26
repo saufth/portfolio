@@ -1,39 +1,37 @@
 // Hooks
 import { useState, useEffect, useRef } from 'react'
 
-const useBgAnimation = (iconsData, delay) => {
-  const [iconsAnimating, setIconsAnimating] = useState(iconsData.map(() => {
-    return {
-      isAnimating: false
-    }
-  }))
+const useBgAnimation = (animation, itemsLength, delay) => {
+  const [itemsAnimating, setItemsAnimating] = useState(Array.from({ length: itemsLength }, () => ({
+    isAnimating: ''
+  })))
 
-  const iconsRef = useRef([])
+  const itemsRef = useRef([])
 
-  const updateIconAnimating = (index, isAnimating) => {
-    let updateIcons = [...iconsAnimating]
-    updateIcons[index].isAnimating = isAnimating
-    setIconsAnimating(updateIcons)
+  const updateItemAnimating = (index, isAnimating) => {
+    let updateItems = [...itemsAnimating]
+    updateItems[index].isAnimating = isAnimating
+    setItemsAnimating(updateItems)
   }
 
   const handleBgAnimation = () => {
-    const availableIcons = iconsAnimating.map((icon, index) => {
-      if (!icon.isAnimating) return index
+    const availableItems = itemsAnimating.map((item, index) => {
+      if (!item.isAnimating) return index
     })
 
-    const indexIconToAnimating = availableIcons[Math.floor(Math.random() * availableIcons.length)]
+    const indexItemToAnimating = availableItems[Math.floor(Math.random() * availableItems.length)]
 
-    if (!indexIconToAnimating) return
+    if (!indexItemToAnimating) return
 
-    iconsRef.current[indexIconToAnimating].addEventListener(
+    itemsRef.current[indexItemToAnimating].addEventListener(
       'animationend',
-      () => updateIconAnimating(indexIconToAnimating, false),
+      () => updateItemAnimating(indexItemToAnimating, ''),
       { once: true }
     )
 
-    iconsRef.current[indexIconToAnimating].style.right = `${Math.floor(Math.random() * 100)}%`
-    iconsRef.current[indexIconToAnimating].style.top = `${Math.floor(Math.random() * 60)}%`
-    updateIconAnimating(indexIconToAnimating, true)
+    itemsRef.current[indexItemToAnimating].style.right = `${Math.floor(Math.random() * 100)}%`
+    itemsRef.current[indexItemToAnimating].style.top = `${Math.floor(Math.random() * 60)}%`
+    updateItemAnimating(indexItemToAnimating, animation)
   }
 
   useEffect(() => {
@@ -41,7 +39,7 @@ const useBgAnimation = (iconsData, delay) => {
     return () => clearInterval(animationInterval)
   }, [])
 
-  return [iconsAnimating, iconsRef]
+  return [itemsAnimating, itemsRef]
 }
 
 export default useBgAnimation
