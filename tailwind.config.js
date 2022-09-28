@@ -80,7 +80,10 @@ module.exports = {
         'center-sm': '0px 0px 16px -3px rgba(0, 0, 0, 0.3)'
       },
       animation: {
-        'steam-up': 'steam-up 5s ease-in-out'
+        'steam-up': 'steam-up 5s ease-in-out',
+        'steam-down': 'steam-down 5s ease-in-out',
+        'steam-right': 'steam-right 5s ease-in-out',
+        'steam-left': 'steam-left 5s ease-in-out'
       },
       keyframes: {
         'steam-up': {
@@ -88,7 +91,28 @@ module.exports = {
           '100%': {
             transform: 'translateY(-8rem)',
             opacity: 0
-          },
+          }
+        },
+        'steam-down': {
+          '64%': { opacity: 0.4 },
+          '100%': {
+            transform: 'translateY(8rem)',
+            opacity: 0
+          }
+        },
+        'steam-right': {
+          '64%': { opacity: 0.4 },
+          '100%': {
+            transform: 'translate(8rem, 8rem)',
+            opacity: 0
+          }
+        },
+        'steam-left': {
+          '64%': { opacity: 0.4 },
+          '100%': {
+            transform: 'translate(8rem, -8rem)',
+            opacity: 0
+          }
         }
       }
     }

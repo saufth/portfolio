@@ -32,26 +32,5 @@
 .location {
   @apply
     /* Spacing */
-    mt-5 sm:mt-8 lg:mt-10;
-}
-
-.canvas {
-  @apply
-    /* Layout */
-    absolute
-    inset-0
-    -z-10;
-}
-
-.icons {
-  @apply
-    /* SVG */
-    [&>svg]:fill-zinc-900
-    /* Sizing */
-    [&>svg]:w-16
-    [&>svg]:h-auto
-    /* Layout */
-    [&>svg]:absolute
-    /* Effects */
-    [&>svg]:opacity-0;
+    mt-5 sm:mt-8;
 }

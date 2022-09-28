@@ -8,14 +8,12 @@
     /* Background */
     bg-white/10
     /* Filters */
-    backdrop-saturate-[3]
+    backdrop-saturate-[4]
     backdrop-blur-sm
     /* Border */
-    border
-    border-zinc-600
     rounded-full
     /* Shadow */
     shadow-center-sm
-    shadow-sky-magenta;
+    shadow-blue-violet;
 }
 

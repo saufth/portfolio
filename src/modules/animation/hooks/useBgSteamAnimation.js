@@ -1,9 +1,9 @@
 // Hooks
 import { useState, useEffect, useRef } from 'react'
 
-const useBgAnimation = (animation, itemsLength, delay) => {
+const useBgSteamAnimation = (itemsLength, delay) => {
   const [itemsAnimating, setItemsAnimating] = useState(Array.from({ length: itemsLength }, () => ({
-    isAnimating: ''
+    isAnimating: false
   })))
 
   const itemsRef = useRef([])
@@ -25,13 +25,13 @@ const useBgAnimation = (animation, itemsLength, delay) => {
 
     itemsRef.current[indexItemToAnimating].addEventListener(
       'animationend',
-      () => updateItemAnimating(indexItemToAnimating, ''),
+      () => updateItemAnimating(indexItemToAnimating, false),
       { once: true }
     )
 
     itemsRef.current[indexItemToAnimating].style.right = `${Math.floor(Math.random() * 100)}%`
     itemsRef.current[indexItemToAnimating].style.top = `${Math.floor(Math.random() * 60)}%`
-    updateItemAnimating(indexItemToAnimating, animation)
+    updateItemAnimating(indexItemToAnimating, true)
   }
 
   useEffect(() => {
@@ -42,4 +42,4 @@ const useBgAnimation = (animation, itemsLength, delay) => {
   return [itemsAnimating, itemsRef]
 }
 
-export default useBgAnimation
+export default useBgSteamAnimation

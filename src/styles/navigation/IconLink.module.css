@@ -1,9 +1,9 @@
 .text {
   @apply
     /* Sizing */
-    ml-2.5 sm:ml-3 lg:ml-4
+    ml-2.5 sm:ml-3 lg:ml-3.5
     /* Typography */
-    font-proxnova-regular
+    font-proxnova-semi
     sm:text-xl lg:text-2xl
     text-transparent
     /* Background */

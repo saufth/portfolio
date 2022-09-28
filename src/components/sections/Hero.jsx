@@ -1,25 +1,17 @@
 // Components
+import BgSteamAnimation from '../animation/BgSteamAnimation'
 import Container from '../../core/components/layout/Container'
 import IconLink from '../../core/components/navigation/IconLink'
 import Navbar from '../navigation/Navbar'
 import Title from '../../core/components/data-display/Title'
-// Hooks
-import useBgAnimation from '../../modules/animation/hooks/useBgAnimation'
 // Data
 import iconsData from '../../modules/sections/data/hero-animation-icons.json'
 // Styles
 import styles from '../../styles/sections/Hero.module.css'
 
-const iconsViewBox = '0 0 24 24'
-const animationStyle = 'animate-steam-up'
 const animationDelay = 777
 
 const Hero = () => {
-  const [itemsAnimating, animatedItemsRef] = useBgAnimation(
-    animationStyle,
-    iconsData.length,
-    animationDelay
-  )
 
   return (
     <div className={styles.hero}>
@@ -28,11 +20,11 @@ const Hero = () => {
 
       <Container auto fullHeight centerAlignment="start">
         <div className={styles.greeting}>
-          <span>Hi</span> 👋 <span>I&apos;m Saúl,</span>
+          <span>Hi</span> 👋 <span>I&apos;m Saúl, a modern</span>
         </div>
 
         <Title
-          text="full~stack"
+          text="fullstack"
           highlighted="web.dev"
           info="Software developer"
         />
@@ -46,20 +38,12 @@ const Hero = () => {
           />
         </div>
 
-        <div className={styles.canvas}>
-          <div className={styles.icons}>
-            {iconsData.map((icon, index) => (
-              <svg
-                viewBox={iconsViewBox}
-                className={itemsAnimating[index].isAnimating}
-                ref={element => animatedItemsRef.current[index] = element}
-                key={index}
-              >
-                <path d={icon.data} />
-              </svg>
-            ))}
-          </div>
-        </div>
+        <BgSteamAnimation
+          items={iconsData}
+          steam="left"
+          delay={animationDelay}
+        />
+
       </Container>
 
     </div>
