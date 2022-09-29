@@ -3,25 +3,29 @@ import useBgSteamAnimation from '../../modules/animation/hooks/useBgSteamAnimati
 // Styles
 import styles from '../../styles/animation/BgSteamAnimation.module.css'
 
-const animationStyle = {
-  up: 'animate-steam-up',
-  down: 'animate-steam-down',
-  right: 'animate-steam-right',
-  left: 'animate-steam-left'
+const steamAnimations = {
+  north: 'animate-steam-to-t',
+  south: 'animate-steam-to-b',
+  east: 'animate-steam-to-r',
+  northeast: 'animate-steam-to-tr',
+  southeast: 'animate-steam-to-bt',
+  west: 'animate-steam-to-l',
+  northwest: 'animate-steam-to-tl',
+  southwest: 'animate-steam-to-bl'
 }
 
-const iconsViewBox = '0 0 24 24'
+const viewBox = '0 0 24 24'
 
 const BgSteamAnimation = ({ items, steam = 'up', delay = 1000 }) => {
   const [itemsAnimating, animatedItemsRef] = useBgSteamAnimation(items.length, delay)
 
-  const animation = animationStyle[steam]
+  const animation = steamAnimations[steam]
 
   return <div className={styles.canvas}>
     <div className={styles.items}>
       {items.map((item, index) => (
         <svg
-          viewBox={iconsViewBox}
+          viewBox={viewBox}
           className={itemsAnimating[index].isAnimating ? animation : ''}
           ref={element => animatedItemsRef.current[index] = element}
           key={item.name}

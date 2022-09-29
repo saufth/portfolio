@@ -13,7 +13,8 @@ const sizeBreakpoints = {
 }
 
 const sizeDefaults = {
-  15: "3.75rem", /* 60px */
+  0.75: '0.1875rem', /* 3px */
+  15: '3.75rem', /* 60px */
   18: '4.5rem', /* 72px */
   18.75: '4.688rem', /* 75px */
   '600px': '600px'
@@ -80,37 +81,69 @@ module.exports = {
         'center-sm': '0px 0px 16px -3px rgba(0, 0, 0, 0.3)'
       },
       animation: {
-        'steam-up': 'steam-up 5s ease-in-out',
-        'steam-down': 'steam-down 5s ease-in-out',
-        'steam-right': 'steam-right 5s ease-in-out',
-        'steam-left': 'steam-left 5s ease-in-out'
+        'steam-to-t': 'steam-to-t 5s ease-in-out',
+        'steam-to-b': 'steam-to-b 5s ease-in-out',
+        'steam-to-r': 'steam-to-r 5s ease-in-out',
+        'steam-to-tr': 'steam-to-tr 5s ease-in-out',
+        'steam-to-br': 'steam-to-br 5s ease-in-out',
+        'steam-to-l': 'steam-to-l 5s ease-in-out',
+        'steam-to-tl': 'steam-to-tl 5s ease-in-out',
+        'steam-to-bl': 'steam-to-bl 5s ease-in-out',
       },
       keyframes: {
-        'steam-up': {
+        'steam-to-t': {
           '64%': { opacity: 0.4 },
           '100%': {
             transform: 'translateY(-8rem)',
             opacity: 0
           }
         },
-        'steam-down': {
+        'steam-to-b': {
           '64%': { opacity: 0.4 },
           '100%': {
             transform: 'translateY(8rem)',
             opacity: 0
           }
         },
-        'steam-right': {
+        'steam-to-r': {
           '64%': { opacity: 0.4 },
           '100%': {
-            transform: 'translate(8rem, 8rem)',
+            transform: 'translateX(8rem)',
             opacity: 0
           }
         },
-        'steam-left': {
+        'steam-to-tr': {
           '64%': { opacity: 0.4 },
           '100%': {
-            transform: 'translate(8rem, -8rem)',
+            transform: 'translate(3rem, -8rem)',
+            opacity: 0
+          }
+        },
+        'steam-to-br': {
+          '64%': { opacity: 0.4 },
+          '100%': {
+            transform: 'translate(3rem, 8rem)',
+            opacity: 0
+          }
+        },
+        'steam-to-l': {
+          '64%': { opacity: 0.4 },
+          '100%': {
+            transform: 'translateX(-8rem)',
+            opacity: 0
+          }
+        },
+        'steam-to-tl': {
+          '64%': { opacity: 0.4 },
+          '100%': {
+            transform: 'translate(-3rem, -8rem)',
+            opacity: 0
+          }
+        },
+        'steam-to-bl': {
+          '64%': { opacity: 0.4 },
+          '100%': {
+            transform: 'translate(-3rem, 8rem)',
             opacity: 0
           }
         }

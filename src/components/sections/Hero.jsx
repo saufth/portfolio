@@ -40,7 +40,7 @@ const Hero = () => {
 
         <BgSteamAnimation
           items={iconsData}
-          steam="left"
+          steam="northeast"
           delay={animationDelay}
         />
 
