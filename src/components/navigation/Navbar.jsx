@@ -11,6 +11,7 @@ const Navbar = () => {
     <header className={styles.navbar}>
       <Container auto>
         <nav className={styles.navigation}>
+
           <div className={styles.avatar}>
             <Anchor>
               <Avatar />
@@ -18,6 +19,7 @@ const Navbar = () => {
           </div>
 
           <BurgerButton />
+
         </nav>
       </Container>
     </header>
