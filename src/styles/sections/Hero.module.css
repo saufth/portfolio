@@ -7,9 +7,9 @@
     overflow-hidden
     /* Background */
     bg-gradient-to-r
-    from-picton-blue
-    via-picton-blue
-    to-button-blue;
+    from-button-blue
+    via-button-blue
+    to-cyan-cornflower-blue;
   clip-path: polygon(24% 0%, 100% 0, 100% 94%, 0 100%, 0 100%, 0 0);
 }
 
