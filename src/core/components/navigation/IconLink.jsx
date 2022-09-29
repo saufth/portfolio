@@ -11,7 +11,7 @@ const IconLink = ({ text, icon, href = '/', target }) => {
 
   return (
     <Anchor target={target} href={href}>
-      <span className="flex">
+      <span className='flex'>
         <img src={iconPath} className={styles.icon} />
           <span className={styles.text}>
             {text}

@@ -32,8 +32,8 @@ const Logo = ({ size = 'md', layout }) => {
 
   return (
     <Image
-      src="/images/logos/sauftdev.svg"
-      alt="Sauftdev Logo"
+      src='/images/logos/sauftdev.svg'
+      alt='Sauftdev Logo'
       layout={layout}
       width={width}
       height={height}

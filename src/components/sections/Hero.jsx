@@ -9,8 +9,6 @@ import iconsData from '../../modules/sections/data/hero-animation-icons.json'
 // Styles
 import styles from '../../styles/sections/Hero.module.css'
 
-const animationDelay = 777
-
 const Hero = () => {
 
   return (
@@ -18,31 +16,33 @@ const Hero = () => {
 
       <Navbar />
 
-      <Container auto fullHeight centerAlignment="start">
+      <Container auto fullHeight centerAlignment='start'>
         <div className={styles.greeting}>
           <span>Hi</span> 👋 <span>I&apos;m Saúl, a modern</span>
         </div>
 
         <Title
-          text="fullstack"
-          highlighted="web.dev"
-          info="Software developer"
+          text='fullstack'
+          highlighted='web.dev'
+          info='Software developer'
         />
 
         <div className={styles.location}>
           <IconLink
-            text="Querétaro, Mx."
-            icon="location"
-            href="https://goo.gl/maps/iM3f27Y7ynwsdp2BA"
-            target="_blank"
+            text='Querétaro, Mx.'
+            icon='location'
+            href='https://goo.gl/maps/iM3f27Y7ynwsdp2BA'
+            target='_blank'
           />
         </div>
 
         <BgSteamAnimation
           items={iconsData}
-          steam="northeast"
-          delay={animationDelay}
+          steam='northeast'
+          delay={777}
         />
+
+        <div className=''></div>
 
       </Container>
 

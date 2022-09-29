@@ -16,10 +16,10 @@ const AppLayout = ({ children }) => {
   return (
     <div>
       <Head>
-        <meta name="description" content="Web developer" />
-        <meta name="keywords" content={String(keywordList)} />
+        <meta name='description' content='Web developer' />
+        <meta name='keywords' content={String(keywordList)} />
         <title>Saufthdev portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main>

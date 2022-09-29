@@ -1,3 +1,9 @@
+const ruleStates = {
+  off: 'off',
+  warn: 'warn',
+  error: 'error',
+}
+
 module.exports = {
   env: {
     browser: true,
@@ -19,12 +25,15 @@ module.exports = {
     'react'
   ],
   rules: {
-    'space-before-function-paren': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    'jsx-quotes': ['error', 'prefer-double'],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    'space-before-function-paren': ruleStates.off,
+    'react/react-in-jsx-scope': ruleStates.off,
+    'react/prop-types': ruleStates.off,
+    'jsx-quotes': [
+      ruleStates.error,
+      'prefer-single'
+    ],
+    'react-hooks/rules-of-hooks': ruleStates.error,
+    'react-hooks/exhaustive-deps': ruleStates.warn
   },
   settings: {
     react: {
