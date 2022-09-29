@@ -12,7 +12,8 @@
   @apply
     /* Flexbox & Grid */
     flex flex-col
-    justify-center;
+    justify-center
+    items-start;
 }
 
 .flexCenter {
