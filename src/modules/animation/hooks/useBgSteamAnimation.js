@@ -17,29 +17,42 @@ const useBgSteamAnimation = (itemsLength, delay) => {
     setItemsAnimating(updateItems)
   }
 
-  const handleBgAnimation = () => {
+  function handleBgAnimation() {
     const availableItems = itemsAnimating.map((item, index) => {
       if (!item.isAnimating) return index
     })
 
-    const indexItemToAnimating = availableItems[Math.floor(Math.random() * availableItems.length)]
+    const indexItemToAnimate = availableItems[Math.floor(Math.random() * availableItems.length)]
 
-    if (!indexItemToAnimating) return
+    if (!indexItemToAnimate) return
 
-    itemsRef.current[indexItemToAnimating].addEventListener(
+    const animationEndHandle = () => {
+      updateItemAnimating(indexItemToAnimate, false)
+    }
+
+    itemsRef.current[indexItemToAnimate].addEventListener(
       'animationend',
-      () => updateItemAnimating(indexItemToAnimating, false),
+      animationEndHandle,
       { once: true }
     )
 
-    itemsRef.current[indexItemToAnimating].style.right = `${Math.floor(Math.random() * 100)}%`
-    itemsRef.current[indexItemToAnimating].style.top = `${Math.floor(Math.random() * 60)}%`
-    updateItemAnimating(indexItemToAnimating, true)
+    itemsRef.current[indexItemToAnimate].style.right = `${Math.floor(Math.random() * 100)}%`
+    itemsRef.current[indexItemToAnimate].style.top = `${Math.floor(Math.random() * 60)}%`
+    updateItemAnimating(indexItemToAnimate, true)
   }
 
   useEffect(() => {
     const animationInterval = setInterval(handleBgAnimation, delay)
-    return () => clearInterval(animationInterval)
+
+    const currentItemsRef = itemsRef.current
+
+    return () => {
+      clearInterval(animationInterval)
+
+      currentItemsRef?.map((_item, index) => {
+        currentItemsRef[index].removeEventListener('animationend', handleBgAnimation.animationEndHandle)
+      })
+    }
   }, [])
 
   return [itemsAnimating, itemsRef]

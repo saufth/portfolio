@@ -13,7 +13,7 @@ import iconsData from '../../modules/sections/data/hero-animation-icons.json'
 // Styles
 import styles from '../../styles/sections/Hero.module.css'
 
-const responsiveConfigState = {
+const heroConfig = {
   initial: {
     titleAlignment: false,
     containerAlignment: 'start',
@@ -33,45 +33,24 @@ const responsiveConfigState = {
 }
 
 const Hero = () => {
-  const [
-    responsiveConfig,
-    setResponsiveConfig
-  ] = useState(responsiveConfigState.initial)
+  const [responsiveConfig, setResponsiveConfig] = useState(heroConfig.initial)
 
   const heroRef = useRef()
   const heroSize = useRefDimensions(heroRef)
 
-  const greetingMagneticRef = useRefMagnetic({
+  const magneticConfig = {
     fieldRef: heroRef,
     reverse: true,
     ...responsiveConfig.animation
-  })
-  const titleMagneticRef = useRefMagnetic({
-    fieldRef: heroRef,
-    reverse: true,
-    ...responsiveConfig.animation
-  })
-  const locationMagneticRef = useRefMagnetic({
-    fieldRef: heroRef,
-    reverse: true,
-    ...responsiveConfig.animation
-  })
-  const card3DMagneticRef = useRefMagnetic({
-    fieldRef: heroRef,
-    reverse: false,
-    ...responsiveConfig.animation
-  })
-
-  const handleResize = () => {
-    setResponsiveConfig(
-      heroSize.width > 640
-        ? responsiveConfigState.initial
-        : responsiveConfigState.mobile
-    )
   }
 
+  const greetingMagneticRef = useRefMagnetic(magneticConfig)
+  const titleMagneticRef = useRefMagnetic(magneticConfig)
+  const locationMagneticRef = useRefMagnetic(magneticConfig)
+  const card3DMagneticRef = useRefMagnetic({ ...magneticConfig, reverse: false })
+
   useEffect(() => {
-    handleResize()
+    setResponsiveConfig(heroSize.width > 640 ? heroConfig.initial : heroConfig.mobile)
   }, [heroSize])
 
   return (

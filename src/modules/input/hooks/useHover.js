@@ -16,7 +16,6 @@ function useHover() {
       node.addEventListener('mouseover', handleMouseOver)
       node.addEventListener('mouseout', handleMouseOut)
 
-      // Clean up on unmount
       return () => {
         node.removeEventListener('mouseover', handleMouseOver)
         node.removeEventListener('mouseout', handleMouseOut)

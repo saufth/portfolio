@@ -20,7 +20,6 @@ const useRefMousePosition = (ref) => {
     if (node) {
       node.addEventListener('mousemove', updateMousePosition)
 
-      // Clean up on unmount
       return () => {
         node.removeEventListener('mousemove', updateMousePosition)
       }
