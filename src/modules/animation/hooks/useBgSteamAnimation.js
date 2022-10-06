@@ -2,7 +2,10 @@
 import { useState, useEffect, useRef } from 'react'
 
 const useBgSteamAnimation = (itemsLength, delay) => {
-  const [itemsAnimating, setItemsAnimating] = useState(Array.from({ length: itemsLength }, () => ({
+  const [
+    itemsAnimating,
+    setItemsAnimating
+  ] = useState(Array.from({ length: itemsLength }, () => ({
     isAnimating: false
   })))
 

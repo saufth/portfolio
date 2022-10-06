@@ -11,13 +11,15 @@ const Container = (
     children,
     auto,
     fullHeight,
-    centerAlignment
+    centerAlignment,
+    perspective
   }
 ) => {
   const autoStyle = auto ? styles.container : ''
   const sizeStyle = fullHeight ? 'h-full' : ''
   const flexStyle = centerAlignment ? alignmentStyles[centerAlignment] : ''
-  const containerStyle = `${autoStyle} ${sizeStyle} ${flexStyle}`
+  const pespectiveStyle = perspective ? '[perspective:1280px]' : ''
+  const containerStyle = `${autoStyle} ${sizeStyle} ${flexStyle} ${pespectiveStyle}`
 
   return (
     <div className={containerStyle}>

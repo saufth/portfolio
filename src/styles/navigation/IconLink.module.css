@@ -1,9 +1,15 @@
+.wrapper {
+  @apply
+    /* Layout */
+    flex;
+}
+
 .text {
   @apply
     /* Sizing */
     ml-2.5 sm:ml-3 lg:ml-3.5
     /* Typography */
-    font-proxnova-semi
+    font-proxnova-regular
     sm:text-xl lg:text-2xl
     text-transparent
     /* Background */
@@ -18,4 +24,11 @@
   @apply
     /* Sizing */
     w-3.5 sm:w-4 lg:w-5;
+}
+
+.shadow {
+  @apply
+    /* Shadow */
+    drop-shadow-lg
+    shadow-zinc-600/20;
 }

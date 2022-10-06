@@ -9,6 +9,7 @@
     /* Background */
     bg-white/10
     /* Filters */
+    backdrop-filter
     backdrop-saturate-[3]
     backdrop-blur-sm
     /* Spacing */

@@ -10,7 +10,9 @@
     bg-gradient-to-r
     from-zinc-800
     via-zinc-800
-    to-black;
+    to-black
+    /* 3D */
+    [backface-visibility:hidden];
 }
 
 .highlight {
@@ -23,4 +25,17 @@
     from-razzle-dazzle-rose
     via-razzle-dazzle-rose
     to-blue-violet;
+}
+
+.alignment {
+  @apply
+    /* Typography */
+    text-center;
+}
+
+.shadow {
+  @apply
+    /* Shadow */
+    drop-shadow-lg
+    shadow-zinc-600/20;
 }

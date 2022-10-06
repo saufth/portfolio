@@ -4,6 +4,7 @@
     w-full
     h-xl sm:h-2xl lg:h-3xl
     /* Layout */
+    relative
     overflow-hidden
     /* Background */
     bg-gradient-to-r
@@ -26,11 +27,77 @@
     [&>span]:via-zinc-800
     [&>span]:to-black
     /* Spacing */
-    mb-3;
+    mb-3
+    /* 3D */
+    [backface-visibility:hidden];
+}
+
+.title {
+  @apply
+    /* 3D */
+    [backface-visibility:hidden];
 }
 
 .location {
   @apply
+    /* Layout */
+    aspect-[18/9]
     /* Spacing */
-    mt-5 sm:mt-8;
+    mt-5 sm:mt-8
+    /* 3D */
+    [backface-visibility:hidden];
+}
+
+.card3DContainer{
+  @apply
+    /* Layout */
+    absolute
+    inset-0
+    -z-10
+    overflow-hidden
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    justify-center md:justify-start
+    items-center md:items-end
+    /* 3D */
+    [perspective:1280px];
+}
+
+.card3D {
+  @apply
+    /* Sizing */
+    w-[90%] md:w-xl lg:w-2xl
+    h-[22rem] md:h-xs lg:h-sm
+    /* Layout */
+    relative
+    aspect-[18/9]
+    /* Spacing */
+    mr-0 md:mr-[6%] lg:mr-[12%]
+    mt-0 md:mt-[16%] lg:mt-[12%]
+    /* 3D */
+    [backface-visibility:hidden];
+}
+
+.card3DBackground {
+  @apply
+    /* Layout */
+    absolute
+    inset-0
+    -z-10
+    /* Border */
+    border
+    border-zinc-600/30
+    rounded-md
+    /* Background */
+    bg-gradient-to-br
+    from-razzle-dazzle-rose/10
+    via-razzle-dazzle-rose/30
+    to-blue-violet/30
+    /* Filters */
+    backdrop-filter
+    backdrop-blur-sm
+    /* Shadow */
+    shadow-xl
+    shadow-zinc-600/20;
 }

@@ -1,18 +1,16 @@
 // Hooks
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
-const useRefMousePosition = () => {
+const useRefMousePosition = (ref) => {
   const [mousePosition, setMousePosition] = useState({
-    mouseX: 0,
-    mouseY: 0
+    x: 0,
+    y: 0
   })
-
-  const ref = useRef(null)
 
   const updateMousePosition = (event) => {
     setMousePosition({
-      mouseX: event.clientX,
-      mouseY: event.clientY
+      x: event.pageX,
+      y: event.pageY
     })
   }
 
@@ -29,7 +27,7 @@ const useRefMousePosition = () => {
     }
   }, [])
 
-  return [ref, mousePosition]
+  return mousePosition
 }
 
 export default useRefMousePosition

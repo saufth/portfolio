@@ -1,23 +1,19 @@
 // Styles
 import styles from '../../../styles/data-display/Title.module.css'
 
-const Title = (
-  {
-    text = '',
-    highlighted = '',
-    center = false,
-    info
-  }
-) => {
+const Title = ({ text = '', highlighted = '', center = false, info, shadow }) => {
   const tooltipInfo = info || `${text} ${highlighted}`
 
-  const titleStyle = `${styles.title}${center ? ' text-center' : ''}`
+  const alignmentStyle = center ? styles.alignment : ''
+  const shadowStyle = shadow ? styles.shadow : ''
+  const titleStyle = `${styles.title} ${shadowStyle} ${alignmentStyle}`
 
   return (
     <h1 title={tooltipInfo} className={titleStyle}>
       {text}
       {highlighted && <span className={styles.highlight}>
-        <br/>{' '}{highlighted}
+        <br/>
+        {' '}{highlighted}
       </span>}
     </h1>
   )
