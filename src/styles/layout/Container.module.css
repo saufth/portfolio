@@ -1,4 +1,4 @@
-.container {
+.auto {
   @apply
     /* Sizing */
     max-w-5xl
@@ -6,6 +6,18 @@
     my-0
     mx-auto
     px-6 lg:px-4;
+}
+
+.fullHeight {
+  @apply
+    /* Sizing */
+    h-full;
+}
+
+.perspective {
+  @apply
+    /* 3D */
+    [perspective:1280px];
 }
 
 .flexCenterStart {

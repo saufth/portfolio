@@ -15,42 +15,54 @@ import styles from '../../styles/sections/Hero.module.css'
 
 const heroConfig = {
   initial: {
-    titleAlignment: false,
-    containerAlignment: 'start',
-    animation: {
-      rotation: 10,
-      transition: 16
+    content: {
+      alignment: 'start',
+      animation: {
+        rotation: 0,
+        transition: 0
+      }
+    },
+    card3D: {
+      animation: {
+        rotation: 22,
+        transition: 22
+      }
     }
   },
   mobile: {
-    titleAlignment: true,
-    containerAlignment: 'center',
-    animation: {
-      rotation: 8,
-      transition: 6
+    content: {
+      alignment: 'center',
+      animation: {
+        rotation: 20,
+        transition: 0
+      }
+    },
+    card3D: {
+      animation: {
+        rotation: 20,
+        transition: 0
+      }
     }
   }
 }
 
 const Hero = () => {
-  const [responsiveConfig, setResponsiveConfig] = useState(heroConfig.initial)
+  const [heroState, setHeroState] = useState(heroConfig.initial)
 
   const heroRef = useRef()
   const heroSize = useRefDimensions(heroRef)
 
-  const magneticConfig = {
+  const contentMagneticRef = useRefMagnetic({
     fieldRef: heroRef,
-    reverse: true,
-    ...responsiveConfig.animation
-  }
-
-  const greetingMagneticRef = useRefMagnetic(magneticConfig)
-  const titleMagneticRef = useRefMagnetic(magneticConfig)
-  const locationMagneticRef = useRefMagnetic(magneticConfig)
-  const card3DMagneticRef = useRefMagnetic({ ...magneticConfig, reverse: false })
+    ...heroState.content.animation
+  })
+  const card3DMagneticRef = useRefMagnetic({
+    fieldRef: heroRef,
+    ...heroState.card3D.animation
+  })
 
   useEffect(() => {
-    setResponsiveConfig(heroSize.width > 640 ? heroConfig.initial : heroConfig.mobile)
+    setHeroState(heroSize.width > 768 ? heroConfig.initial : heroConfig.mobile)
   }, [heroSize])
 
   return (
@@ -62,33 +74,35 @@ const Hero = () => {
         auto
         fullHeight
         perspective
-        centerAlignment={responsiveConfig.containerAlignment}
+        alignment={heroState.content.alignment}
       >
+        <div className={styles.content} ref={contentMagneticRef}>
 
-        <div className={styles.greeting} ref={greetingMagneticRef}>
-          <span>Hi</span> 👋 <span>I&apos;m Saúl, a modern</span>
+          <div className={styles.greeting}>
+            <span>Hi</span> 👋 <span>I&apos;m Saúl, a modern</span>
+          </div>
+
+          <div className={styles.title}>
+            <Title
+              text='fullstack'
+              highlighted='web.dev'
+              info='Software developer'
+              alignment={heroState.content.alignment}
+              shadow
+            />
+          </div>
+
+          <div className={styles.location}>
+            <IconLink
+              text='Querétaro, Mx.'
+              icon='location'
+              href='https://goo.gl/maps/iM3f27Y7ynwsdp2BA'
+              target='_blank'
+              shadow
+            />
+          </div>
+
         </div>
-
-        <div className={styles.title} ref={titleMagneticRef}>
-          <Title
-            text='fullstack'
-            highlighted='web.dev'
-            info='Software developer'
-            center={responsiveConfig.titleAlignment}
-            shadow
-          />
-        </div>
-
-        <div className={styles.location} ref={locationMagneticRef}>
-          <IconLink
-            text='Querétaro, Mx.'
-            icon='location'
-            href='https://goo.gl/maps/iM3f27Y7ynwsdp2BA'
-            target='_blank'
-            shadow
-          />
-        </div>
-
       </Container>
 
       <BgSteamAnimation items={iconsData} steam='northeast' delay={666} />

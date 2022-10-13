@@ -51,10 +51,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        'blue-violet': '#932fe9',
-        'razzle-dazzle-rose': '#E83ACF',
-        'cyan-cornflower-blue': '#1F82C4',
         'button-blue': '#28A3F7',
+        'blue-violet': '#932fe9',
+        'cyan-cornflower-blue': '#1F82C4',
+        'bright-green': '#0FFC55',
+        'razzle-dazzle-rose': '#E83ACF',
         'deep-carmine-pink': '#F63627',
         'cadmium-yellow': '#FFF603',
         sunglow: '#FFCA39'

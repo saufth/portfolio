@@ -17,7 +17,7 @@ const steamAnimations = {
 const viewBox = '0 0 24 24'
 
 const BgSteamAnimation = ({ items, steam = 'up', delay = 1000 }) => {
-  const [itemsAnimating, animatedItemsRef] = useBgSteamAnimation(items.length, delay)
+  const [itemsAnimating, itemsRef] = useBgSteamAnimation(items.length, delay)
 
   const animation = steamAnimations[steam]
 
@@ -27,7 +27,7 @@ const BgSteamAnimation = ({ items, steam = 'up', delay = 1000 }) => {
         <svg
           viewBox={viewBox}
           className={itemsAnimating[index].isAnimating ? animation : ''}
-          ref={svg => animatedItemsRef.current[index] = svg}
+          ref={svg => itemsRef.current[index] = svg}
           key={item.name}
         >
           <path d={item.data} />

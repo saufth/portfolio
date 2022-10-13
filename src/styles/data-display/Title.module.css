@@ -8,6 +8,9 @@
     /* Background */
     bg-clip-text
     bg-gradient-to-r
+    /* from-blue-violet
+    via-razzle-dazzle-rose
+    to-razzle-dazzle-rose */
     from-zinc-800
     via-zinc-800
     to-black
@@ -22,9 +25,15 @@
     /* Background */
     bg-clip-text
     bg-gradient-to-r
-    from-razzle-dazzle-rose
+    from-blue-violet
     via-razzle-dazzle-rose
-    to-blue-violet;
+    to-razzle-dazzle-rose
+    /* from-sunglow
+    via-cadmium-yellow
+    to-cadmium-yellow */
+    /* from-zinc-800
+    via-zinc-800
+    to-black; */
 }
 
 .alignment {
@@ -36,6 +45,5 @@
 .shadow {
   @apply
     /* Shadow */
-    drop-shadow-lg
-    shadow-zinc-600/20;
+    drop-shadow;
 }

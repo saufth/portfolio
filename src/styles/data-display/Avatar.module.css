@@ -7,17 +7,18 @@
     overflow-hidden
     /* Background */
     bg-gradient-to-br
-    from-razzle-dazzle-rose/10
-    via-razzle-dazzle-rose/30
-    to-blue-violet/30
+    from-razzle-dazzle-rose/30
+    via-razzle-dazzle-rose/50
+    to-blue-violet/40
     /* Filters */
     backdrop-filter
     backdrop-blur-sm
-    backdrop-saturate-50
+    backdrop-saturate-[.1]
+    backdrop-brightness-75
     /* Border */
     rounded-full
     /* Shadow */
-    shadow-md
-    shadow-zinc-900/30;
+    shadow-sm
+    shadow-zinc-900/40;
 }
 

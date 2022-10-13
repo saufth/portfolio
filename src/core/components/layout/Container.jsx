@@ -6,19 +6,11 @@ const alignmentStyles = {
   end: styles.flexCenterEnd
 }
 
-const Container = (
-  {
-    children,
-    auto,
-    fullHeight,
-    centerAlignment,
-    perspective
-  }
-) => {
-  const autoStyle = auto ? styles.container : ''
-  const sizeStyle = fullHeight ? 'h-full' : ''
-  const flexStyle = centerAlignment ? alignmentStyles[centerAlignment] : ''
-  const pespectiveStyle = perspective ? '[perspective:1280px]' : ''
+const Container = ({ children, auto, fullHeight, alignment, perspective }) => {
+  const autoStyle = auto ? styles.auto : ''
+  const sizeStyle = fullHeight ? styles.fullHeight : ''
+  const flexStyle = alignment ? alignmentStyles[alignment] : ''
+  const pespectiveStyle = perspective ? styles.perspective : ''
   const containerStyle = `${autoStyle} ${sizeStyle} ${flexStyle} ${pespectiveStyle}`
 
   return (

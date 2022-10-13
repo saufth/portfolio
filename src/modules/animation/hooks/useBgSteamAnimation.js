@@ -50,7 +50,7 @@ const useBgSteamAnimation = (itemsLength, delay) => {
       clearInterval(animationInterval)
 
       currentItemsRef?.map((_item, index) => {
-        currentItemsRef[index].removeEventListener('animationend', handleBgAnimation.animationEndHandle)
+        currentItemsRef[index]?.removeEventListener('animationend', handleBgAnimation.animationEndHandle)
       })
     }
   }, [])
