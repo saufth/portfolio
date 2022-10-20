@@ -56,14 +56,14 @@ const Hero = () => {
   const heroRef = useRef()
   const heroSize = useRefDimensions(heroRef)
 
-  const contentMagneticRef = useRefMagnetic({
-    fieldRef: heroRef,
-    ...heroState.content.animation
-  })
-  const card3DMagneticRef = useRefMagnetic({
-    fieldRef: heroRef,
-    ...heroState.card3D.animation
-  })
+  // const contentMagneticRef = useRefMagnetic({
+  //   fieldRef: heroRef,
+  //   ...heroState.content.animation
+  // })
+  // const card3DMagneticRef = useRefMagnetic({
+  //   fieldRef: heroRef,
+  //   ...heroState.card3D.animation
+  // })
 
   useEffect(() => {
     setHeroState(heroSize.width > 768 ? heroConfig.initial : heroConfig.mobile)
@@ -80,7 +80,8 @@ const Hero = () => {
         perspective
         alignment={heroState.content.alignment}
       >
-        <div className={styles.content} ref={contentMagneticRef}>
+        {/* <div className={styles.content} ref={contentMagneticRef}> */}
+        <div className={styles.content}>
 
           <div className={styles.greeting}>
             <span>Hi</span> 👋 <span>I&apos;m Saúl, a modern</span>
@@ -111,11 +112,11 @@ const Hero = () => {
 
       <BgSteamAnimation items={iconsData} steam='northeast' />
 
-      <div className={styles.card3DContainer}>
+      {/* <div className={styles.card3DContainer}>
         <div className={styles.card3D} ref={card3DMagneticRef}>
           <div className={styles.card3DBackground}></div>
         </div>
-      </div>
+      </div> */}
 
     </div>
   )

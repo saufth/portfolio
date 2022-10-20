@@ -1,3 +1,5 @@
+.group {}
+
 .button {
   @apply
     /* Sizing */
@@ -5,13 +7,12 @@
     h-10 sm:h-12 lg:h-14
     /* Layout */
     relative
+    overflow-hidden
     /* Flexbox & Grid */
     flex
     flex-col
     items-center
     justify-center
-    /* Background */
-    bg-razzle-dazzle-rose hover:bg-blue-violet
     /* Border */
     rounded
     /* Shadow */
@@ -19,7 +20,67 @@
     /* Animation */
     transition-transform
     ease-out
-    duration-500;
+    duration-[600ms];
+}
+
+.background  {
+  @apply
+    /* Layout */
+    absolute
+    inset-0
+    -z-20
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    items-center
+    justify-center
+    /* Background */
+    bg-razzle-dazzle-rose;
+}
+
+.cercle  {
+  @apply
+    /* Sizing */
+    w-0 group-hover:w-64
+    h-0 group-hover:h-64
+    /* Layout */
+    absolute
+    /* Background */
+    bg-blue-violet
+    /* Border */
+    rounded-full 
+    /* Animation */
+    transition-[width,height]
+    ease-in
+    duration-300;
+}
+
+.cercle2 {
+  @apply
+    /* background */
+    bg-razzle-dazzle-rose
+    /* Animation */
+    delay-100;
+}
+
+.cercle3 {
+  @apply
+    /* Animation */
+    delay-200;
+}
+
+.cercle4 {
+  @apply
+    /* background */
+    bg-razzle-dazzle-rose
+    /* Animation */
+    delay-300;
+}
+
+.cercle5 {
+  @apply
+    /* Animation */
+    delay-[400ms];
 }
 
 .text {
@@ -32,7 +93,7 @@
     /* Animation */
     transition-transform
     ease-out
-    duration-500
+    duration-[600ms]
     /* 3D */
     [transform-style:preserve-3d]
     [backface-visibility:hidden];
@@ -40,16 +101,14 @@
 
 .magneticField {
   @apply
-    /* Sizing */
-    w-full
-    h-full
     /* Layout */
     absolute
+    inset-0
     z-10
     /* Animation */
     transition-transform
     ease-out
-    duration-500
+    duration-[600ms]
     /* 3D */
     [transform-style:preserve-3d]
     [backface-visibility:hidden];

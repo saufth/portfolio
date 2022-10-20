@@ -19,13 +19,9 @@ const Navbar = () => {
             </Anchor>
           </div>
 
-          <Button onclick={() => alert('Lets talk!')}>
+          <Button onclick={() => alert('Let\'s take a coffee!')}>
             Let´s take a coffee!
           </Button>
-
-          {/* <div className='block sm:hidden'>
-            <BurgerButton />
-          </div> */}
 
         </nav>
       </Container>
