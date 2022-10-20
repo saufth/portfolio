@@ -1,24 +1,16 @@
 .avatar {
   @apply
     /* Sizing */
-    w-18 sm:w-20 lg:w-[5.375rem]
-    h-18 sm:h-20 lg:h-[5.375rem]
+    w-18 sm:w-20 lg:w-[5.725rem]
+    h-18 sm:h-20 lg:h-[5.725rem]
     /* Layout */
     overflow-hidden
     /* Background */
-    bg-gradient-to-br
-    from-razzle-dazzle-rose/30
-    via-razzle-dazzle-rose/50
-    to-blue-violet/40
-    /* Filters */
-    backdrop-filter
-    backdrop-blur-sm
-    backdrop-saturate-[.1]
-    backdrop-brightness-75
+    bg-blue-violet
     /* Border */
     rounded-full
     /* Shadow */
-    shadow-sm
+    shadow-md
     shadow-zinc-900/40;
 }
 

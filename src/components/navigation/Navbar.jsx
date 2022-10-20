@@ -5,6 +5,7 @@ import BurgerButton from '../../core/components/input/BurgerButton'
 import Container from '../../core/components/layout/Container'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
+import Button from '../../core/components/input/Button'
 
 const Navbar = () => {
   return (
@@ -18,7 +19,13 @@ const Navbar = () => {
             </Anchor>
           </div>
 
-          <BurgerButton />
+          <Button onclick={() => alert('Lets talk!')}>
+            Let´s take a coffee!
+          </Button>
+
+          {/* <div className='block sm:hidden'>
+            <BurgerButton />
+          </div> */}
 
         </nav>
       </Container>

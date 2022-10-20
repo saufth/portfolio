@@ -19,13 +19,15 @@ const heroConfig = {
       alignment: 'start',
       animation: {
         rotation: 0,
-        transition: 0
+        transition: 0,
+        fromPage: true
       }
     },
     card3D: {
       animation: {
-        rotation: 22,
-        transition: 22
+        rotation: 20,
+        transition: 10,
+        fromPage: true
       }
     }
   },
@@ -34,13 +36,15 @@ const heroConfig = {
       alignment: 'center',
       animation: {
         rotation: 20,
-        transition: 0
+        transition: 0,
+        fromPage: true
       }
     },
     card3D: {
       animation: {
         rotation: 20,
-        transition: 0
+        transition: 0,
+        fromPage: true
       }
     }
   }
@@ -105,7 +109,7 @@ const Hero = () => {
         </div>
       </Container>
 
-      <BgSteamAnimation items={iconsData} steam='northeast' delay={666} />
+      <BgSteamAnimation items={iconsData} steam='northeast' />
 
       <div className={styles.card3DContainer}>
         <div className={styles.card3D} ref={card3DMagneticRef}>

@@ -1,27 +1,28 @@
 // Hooks
 import { useState, useEffect } from 'react'
 
-const useRefMousePosition = (ref) => {
+const useRefMousePosition = (ref, fromPage) => {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0
   })
 
-  const updateMousePosition = (event) => {
-    setMousePosition({
-      x: event.pageX,
-      y: event.pageY
-    })
+  const handleMousePosition = (event) => {
+    const mousePosition = fromPage
+      ? { x: event.pageX, y: event.pageY }
+      : { x: event.offsetX, y: event.offsetY }
+
+    setMousePosition(mousePosition)
   }
 
   useEffect(() => {
     const node = ref.current
 
     if (node) {
-      node.addEventListener('mousemove', updateMousePosition)
+      node.addEventListener('mousemove', handleMousePosition)
 
       return () => {
-        node.removeEventListener('mousemove', updateMousePosition)
+        node.removeEventListener('mousemove', handleMousePosition)
       }
     }
   }, [])

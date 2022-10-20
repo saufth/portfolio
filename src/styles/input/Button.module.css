@@ -1,0 +1,56 @@
+.button {
+  @apply
+    /* Sizing */
+    w-40 sm:w-48 lg:w-52
+    h-10 sm:h-12 lg:h-14
+    /* Layout */
+    relative
+    /* Flexbox & Grid */
+    flex
+    flex-col
+    items-center
+    justify-center
+    /* Background */
+    bg-razzle-dazzle-rose hover:bg-blue-violet
+    /* Border */
+    rounded
+    /* Shadow */
+    shadow-md
+    /* Animation */
+    transition-transform
+    ease-out
+    duration-500;
+}
+
+.text {
+  @apply
+    /* Typography */
+    font-proxnova-light
+    text-white
+    text-sm selection:sm:text-base lg:text-lg
+    text-center
+    /* Animation */
+    transition-transform
+    ease-out
+    duration-500
+    /* 3D */
+    [transform-style:preserve-3d]
+    [backface-visibility:hidden];
+}
+
+.magneticField {
+  @apply
+    /* Sizing */
+    w-full
+    h-full
+    /* Layout */
+    absolute
+    z-10
+    /* Animation */
+    transition-transform
+    ease-out
+    duration-500
+    /* 3D */
+    [transform-style:preserve-3d]
+    [backface-visibility:hidden];
+}

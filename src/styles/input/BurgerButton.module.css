@@ -3,8 +3,8 @@
 .buttonBurger {
   @apply
     /* Sizing */
-    w-5 sm:w-6
-    h-4 sm:h-5
+    w-6
+    h-5
     /* Layout */
     relative;
 }
@@ -12,19 +12,19 @@
 .buttonBurgerSticks {
   @apply
     /* Sizing */
-    before:w-5 before:sm:w-6 before:lg:w-7
-    before:h-0.5 before:lg:h-0.75
-    w-4 group-hover:w-5 sm:w-5 group-hover:sm:w-6 lg:w-6 group-hover:lg:w-7
-    h-0.5 lg:h-0.75
-    after:w-5 after:sm:w-6 after:lg:w-7
-    after:h-0.5 after:lg:h-0.75
+    before:w-6 before:sm:w-7
+    before:h-0.5 before:sm:h-0.75
+    w-5 group-hover:w-6 sm:w-6 group-hover:sm:w-7
+    h-0.5 sm:h-0.75
+    after:w-6 after:sm:w-7
+    after:h-0.5 after:sm:h-0.75
     /* Background */
     before:bg-gray-700
     bg-gray-700
     after:bg-gray-700
     /* Layout */
     before:absolute
-    before:-top-2 sm:before:-top-2.5
+    before:-top-2.5
     before:right-0
     before:bottom-0
     absolute
@@ -32,7 +32,7 @@
     right-0
     bottom-0
     after:absolute
-    after:top-2 sm:after:top-2.5
+    after:top-2.5
     after:right-0
     after:bottom-0
     /* Spacing */
