@@ -1,5 +1,3 @@
-.group {}
-
 .button {
   @apply
     /* Sizing */
@@ -20,72 +18,10 @@
     /* Animation */
     transition-transform
     ease-out
-    duration-500
+    duration-600
+    /* 3D */
     [transform-style:preserve-3d]
     [backface-visibility:hidden];
-}
-
-.background  {
-  @apply
-    /* Layout */
-    absolute
-    inset-0
-    -z-20
-    /* Flexbox & Grid */
-    flex
-    flex-col
-    items-center
-    justify-center
-    /* Background */
-    bg-razzle-dazzle-rose;
-}
-
-.cercle  {
-  @apply
-    /* Sizing */
-    w-0 group-hover:w-64
-    h-0 group-hover:h-64
-    /* Layout */
-    absolute
-    /* Background */
-    even:bg-razzle-dazzle-rose
-    odd:bg-blue-violet
-    /* Border */
-    rounded-full 
-    /* Animation */
-    transition-[width,height]
-    ease-in
-    duration-300;
-}
-
-.cercle1 {
-  @apply
-    /* Animation */
-    delay-600 group-hover:delay-0;
-}
-
-.cercle2 {
-  @apply
-    /* Animation */
-    delay-500 group-hover:delay-100;
-}
-
-.cercle3 {
-  @apply
-    /* Animation */
-    delay-400 group-hover:delay-200;
-}
-
-.cercle4 {
-  @apply
-    /* Animation */
-    delay-300;
-}
-
-.cercle5 {
-  @apply
-    /* Animation */
-    delay-0 group-hover:delay-400;
 }
 
 .text {

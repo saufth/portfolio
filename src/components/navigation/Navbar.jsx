@@ -1,6 +1,6 @@
 // Components
 import Anchor from '../../core/components/navigation/Anchor'
-import Avatar from '../../core/components/data-display/Avatar'
+import MagnetAvatar from '../../core/components/data-display/MagnetAvatar'
 import Container from '../../core/components/layout/Container'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
@@ -14,7 +14,7 @@ const Navbar = () => {
 
           <div className={styles.avatar}>
             <Anchor>
-              <Avatar />
+              <MagnetAvatar />
             </Anchor>
           </div>
 

@@ -11,6 +11,13 @@
     rounded-full
     /* Shadow */
     shadow-md
-    shadow-zinc-900/40;
+    shadow-zinc-900/40
+    /* Animation */
+    transition-transform
+    ease-out
+    duration-600
+    /* 3D */
+    [transform-style:preserve-3d]
+    [backface-visibility:hidden];
 }
 
