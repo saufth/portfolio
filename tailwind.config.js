@@ -147,6 +147,7 @@ module.exports = {
         '400': '400ms'
       },
       transitionDelay: {
+        '0': '0ms',
         '400': '400ms',
         '600': '600ms',
         '800': '800ms',

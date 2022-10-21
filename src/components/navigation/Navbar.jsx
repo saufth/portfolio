@@ -5,7 +5,7 @@ import BurgerButton from '../../core/components/input/BurgerButton'
 import Container from '../../core/components/layout/Container'
 // Styles
 import styles from '../../styles/navigation/Navbar.module.css'
-import Button from '../../core/components/input/Button'
+import MagnetButton from '../../core/components/input/MagnetButton'
 
 const Navbar = () => {
   return (
@@ -19,9 +19,9 @@ const Navbar = () => {
             </Anchor>
           </div>
 
-          <Button onclick={() => alert('Let\'s take a coffee!')}>
+          <MagnetButton onclick={() => alert('Let\'s take a coffee!')}>
             Let´s take a coffee!
-          </Button>
+          </MagnetButton>
 
         </nav>
       </Container>

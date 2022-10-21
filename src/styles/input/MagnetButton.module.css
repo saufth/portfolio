@@ -20,7 +20,9 @@
     /* Animation */
     transition-transform
     ease-out
-    duration-500;
+    duration-500
+    [transform-style:preserve-3d]
+    [backface-visibility:hidden];
 }
 
 .background  {
@@ -59,7 +61,7 @@
 .cercle1 {
   @apply
     /* Animation */
-    delay-600 group-hover:delay-[0ms];
+    delay-600 group-hover:delay-0;
 }
 
 .cercle2 {
@@ -83,19 +85,7 @@
 .cercle5 {
   @apply
     /* Animation */
-    delay-200 group-hover:delay-400;
-}
-
-.cercle6 {
-  @apply
-    /* Animation */
-    delay-100 group-hover:delay-500;
-}
-
-.cercle7 {
-  @apply
-    /* Animation */
-    delay-[0ms] group-hover:delay-600;
+    delay-0 group-hover:delay-400;
 }
 
 .text {
@@ -119,12 +109,5 @@
     /* Layout */
     absolute
     inset-0
-    z-10
-    /* Animation */
-    transition-transform
-    ease-out
-    duration-600
-    /* 3D */
-    [transform-style:preserve-3d]
-    [backface-visibility:hidden];
+    z-10;
 }

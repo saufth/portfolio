@@ -2,14 +2,14 @@
 import { useRef } from 'react'
 import useRefMagnetic from '../../../modules/animation/hooks/useRefMagnetic'
 // Styles
-import styles from '../../../styles/input/Button.module.css'
+import styles from '../../../styles/input/MagnetButton.module.css'
 
 const buttonStyle = `${styles.button} ${styles.group}`
 const cercleStyles = Array.from({ length: 5 }, (_item, index) => (
   `${styles.cercle} ${styles[`cercle${index}`]}`
 ))
 
-const Button = ({ children, onclick }) => {
+const MagnetButton = ({ children, onclick }) => {
   const magneticConfig = {
     fieldRef: useRef(),
     rotation: 0,
@@ -33,4 +33,4 @@ const Button = ({ children, onclick }) => {
   )
 }
 
-export default Button
+export default MagnetButton
