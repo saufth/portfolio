@@ -143,8 +143,11 @@ module.exports = {
         }
       },
       transitionDuration: {
+        '50': '50ms',
+        '400': '400ms',
         '600': '600ms',
-        '400': '400ms'
+        '800': '800ms',
+        '900': '900ms'
       },
       transitionDelay: {
         '0': '0ms',

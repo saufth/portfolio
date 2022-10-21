@@ -27,36 +27,35 @@
     rounded-full 
     /* Animation */
     transition-[width,height]
-    ease-linear
-    duration-400;
+    ease-linear;
 }
 
 .cercle1 {
   @apply
     /* Animation */
-    delay-600 group-hover:delay-0;
+    duration-900 group-hover:duration-100;
 }
 
 .cercle2 {
   @apply
     /* Animation */
-    delay-500 group-hover:delay-100;
+    duration-700 group-hover:duration-300;
 }
 
 .cercle3 {
   @apply
     /* Animation */
-    delay-400 group-hover:delay-200;
+    duration-500;
 }
 
 .cercle4 {
   @apply
     /* Animation */
-    delay-300;
+    duration-300 group-hover:duration-700;
 }
 
 .cercle5 {
   @apply
     /* Animation */
-    delay-0 group-hover:delay-400;
+    duration-100 group-hover:duration-900;
 }
