@@ -20,7 +20,7 @@
     /* Animation */
     transition-transform
     ease-out
-    duration-[600ms];
+    duration-500;
 }
 
 .background  {
@@ -46,7 +46,8 @@
     /* Layout */
     absolute
     /* Background */
-    bg-blue-violet
+    even:bg-razzle-dazzle-rose
+    odd:bg-blue-violet
     /* Border */
     rounded-full 
     /* Animation */
@@ -55,24 +56,26 @@
     duration-300;
 }
 
+.cercle1 {
+  @apply
+    /* Animation */
+    delay-600 group-hover:delay-[0ms];
+}
+
 .cercle2 {
   @apply
-    /* background */
-    bg-razzle-dazzle-rose
     /* Animation */
-    delay-100;
+    delay-500 group-hover:delay-100;
 }
 
 .cercle3 {
   @apply
     /* Animation */
-    delay-200;
+    delay-400 group-hover:delay-200;
 }
 
 .cercle4 {
   @apply
-    /* background */
-    bg-razzle-dazzle-rose
     /* Animation */
     delay-300;
 }
@@ -80,7 +83,19 @@
 .cercle5 {
   @apply
     /* Animation */
-    delay-[400ms];
+    delay-200 group-hover:delay-400;
+}
+
+.cercle6 {
+  @apply
+    /* Animation */
+    delay-100 group-hover:delay-500;
+}
+
+.cercle7 {
+  @apply
+    /* Animation */
+    delay-[0ms] group-hover:delay-600;
 }
 
 .text {
@@ -93,7 +108,7 @@
     /* Animation */
     transition-transform
     ease-out
-    duration-[600ms]
+    duration-600
     /* 3D */
     [transform-style:preserve-3d]
     [backface-visibility:hidden];
@@ -108,7 +123,7 @@
     /* Animation */
     transition-transform
     ease-out
-    duration-[600ms]
+    duration-600
     /* 3D */
     [transform-style:preserve-3d]
     [backface-visibility:hidden];

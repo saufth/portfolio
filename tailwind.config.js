@@ -141,6 +141,16 @@ module.exports = {
             opacity: 0
           }
         }
+      },
+      transitionDuration: {
+        '600': '600ms',
+        '400': '400ms'
+      },
+      transitionDelay: {
+        '400': '400ms',
+        '600': '600ms',
+        '800': '800ms',
+        '1200': '1200ms'
       }
     }
   },

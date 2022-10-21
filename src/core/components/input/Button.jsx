@@ -4,38 +4,31 @@ import useRefMagnetic from '../../../modules/animation/hooks/useRefMagnetic'
 // Styles
 import styles from '../../../styles/input/Button.module.css'
 
-const magneticConfig = {
-  rotation: 0,
-  attraction: true
-}
+const buttonStyle = `${styles.button} ${styles.group}`
+const cercleStyles = Array.from({ length: 5 }, (_item, index) => (
+  `${styles.cercle} ${styles[`cercle${index}`]}`
+))
 
 const Button = ({ children, onclick }) => {
-  const magneticFieldRef = useRef()
-
-  const buttonRef = useRefMagnetic({
-    fieldRef: magneticFieldRef,
-    transition: 14,
-    ...magneticConfig
-  })
-  const textRef = useRefMagnetic({
-    fieldRef: magneticFieldRef,
-    transition: 7,
-    ...magneticConfig
-  })
+  const magneticConfig = {
+    fieldRef: useRef(),
+    rotation: 0,
+    attraction: true
+  }
+  const buttonRef = useRefMagnetic({ transition: 14, ...magneticConfig })
+  const textRef = useRefMagnetic({ transition: 7, ...magneticConfig })
 
   return (
-    <button className={`${styles.button} ${styles.group}`} ref={buttonRef} onClick={onclick}>
+    <button className={buttonStyle} ref={buttonRef} onClick={onclick}>
       <div className={styles.background}>
-        <div className={styles.cercle}></div>
-        <div className={`${styles.cercle} ${styles.cercle2}`}></div>
-        <div className={`${styles.cercle} ${styles.cercle3}`}></div>
-        <div className={`${styles.cercle} ${styles.cercle4}`}></div>
-        <div className={`${styles.cercle} ${styles.cercle5}`}></div>
+        {cercleStyles.map((item, index) => {
+          return <span className={item} key={index}></span>
+        })}
       </div>
       <span className={styles.text} ref={textRef}>
         {children}
       </span>
-      <div className={styles.magneticField} ref={magneticFieldRef}></div>
+      <div className={styles.magneticField} ref={magneticConfig.fieldRef}></div>
     </button>
   )
 }
